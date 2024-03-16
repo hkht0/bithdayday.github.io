@@ -68,7 +68,6 @@ function doSomething() {
 	var text = document.getElementById("myInput").value;
   
 	if (text.includes("apple")) {
-		document.getElementById("rick").style.visibility = "visible";
 		document.getElementById("error").style.visibility = "hidden";
 
 	}else if (text.includes("ball")) {
@@ -194,7 +193,7 @@ function doSomething() {
 		quiz.innerHTML = `
       <h1>Опрос успешно пройден!</h1>
       <p>Правильных ответов: ${score}/${quizData.length}</p>
-	  <p>Пароль: </p>`
+	  <p>Пароль: i_love_you </p>`
 	  error.innerHTML = `
 	  <input placeholder="Ввевиде пароль с опроса" type="text" id="myInput" onsubmit="doSomething">
 	<button class="content-list__btn" onclick="doSomething()">Check</button>
