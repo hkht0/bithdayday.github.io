@@ -1,4 +1,3 @@
-localStorage.clear();
 
 const btnDarkMode = document.querySelector('.dark-mode-btn')
 
@@ -69,8 +68,12 @@ window.scroll = function() {
 function doSomething() {
 	var text = document.getElementById("myInput").value;
   
-	if (text.includes("apple")) {
+	if (text.includes("i_love_you")) {
 		document.getElementById("error").style.visibility = "hidden";
+		quiz.innerHTML = `
+		<iframe style="border-radius: 20px;" width="350" height="315" src="https://www.youtube.com/embed/ixAQiEL8JkY?si=ZZccNQKUoHG-41kr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    `;
 
 	}else if (text.includes("ball")) {
 		error.innerHTML = `<p>еще раз...</p>
@@ -213,9 +216,17 @@ function doSomething() {
   
 function int() {
     console.log('calling');
-    var source = document.getElementById('j1_64_anchor').click();
+    var source = document.getElementById('error').click();
 }
 
 var coll = document.getElementsByClassName("collapsible");
 var i;
+
+function inputKeyUp(e) {
+    e.which = e.which || e.keyCode;
+    if(e.which == 13) {  //Key code of Enter
+        showResult();
+    }
+}
   
+
