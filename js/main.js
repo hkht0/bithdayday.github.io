@@ -1,3 +1,5 @@
+localStorage.clear();
+
 const btnDarkMode = document.querySelector('.dark-mode-btn')
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
